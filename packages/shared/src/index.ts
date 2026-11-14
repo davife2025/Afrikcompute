@@ -30,3 +30,45 @@ export interface VerificationResult {
   notChecked: string[];
   verifiedAt: string;
 }
+
+export type TaskType = "label" | "translate" | "review" | "transcribe";
+
+export interface Profile {
+  id: string;
+  nearAccountId: string;
+  role: Role | "both";
+  locale: Locale;
+  createdAt: string;
+}
+
+export interface Language {
+  code: string;
+  name: string;
+  nativeName: string | null;
+}
+
+export interface DataRequest {
+  id: string;
+  requesterId: string;
+  title: string;
+  description: string | null;
+  languageCode: string;
+  taskType: TaskType;
+  rewardAmount: number;
+  rewardToken: string;
+  status: "open" | "closed";
+  createdAt: string;
+}
+
+export interface AuthChallenge {
+  nonce: string; // 32 bytes, hex
+  exp: number; // unix seconds
+  token: string; // opaque, send back unchanged
+  message: string;
+  recipient: string;
+}
+
+export interface AuthSession {
+  token: string; // bearer token for the API
+  profile: Profile;
+}
