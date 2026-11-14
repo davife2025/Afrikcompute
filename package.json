@@ -1,0 +1,19 @@
+{
+  "name": "afrikcompute",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build:shared": "pnpm --filter @afrikcompute/shared build",
+    "dev": "pnpm build:shared && pnpm -r --parallel --filter @afrikcompute/api --filter @afrikcompute/web dev",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm build:shared && pnpm -r typecheck",
+    "check": "pnpm typecheck"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
