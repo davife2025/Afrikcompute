@@ -94,3 +94,17 @@ export interface SubmissionView {
   review: PrivateReviewResponse | null;
   createdAt: string;
 }
+
+export type PayoutStatus = "pending" | "processing" | "sent" | "failed" | "needs_review" | "simulated";
+
+export interface Payout {
+  id: string;
+  submissionId: string;
+  contributorId: string;
+  amount: number;
+  token: string;
+  status: PayoutStatus;
+  txRef: string | null;
+  failureCode: string | null;
+  createdAt: string;
+}
