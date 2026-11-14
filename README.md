@@ -1,10 +1,11 @@
-# AfrikCompute: snapshot after Session 1 (Core infrastructure)
+# AfrikCompute: snapshot after Session 2 (NEAR AI Cloud and attestation)
 
 This is the project as it stood at the end of this session. Later sessions add to it. The complete project is `afrikcompute-complete.zip` (also the Session 7 zip).
 
 ## What is in this snapshot (cumulative)
 
 1. Monorepo: `apps/api` (Express + TypeScript), `apps/web` (Next.js placeholder page), `packages/shared` (types), Supabase client, `/health` route that checks your Supabase project.
+2. NEAR AI Cloud client and an attestation verifier (nonce echoed, Intel TDX quote, key and nonce bound to the report, debug off, NVIDIA GPU attestation). `pnpm --filter @afrikcompute/api near:check` sends one completion and prints a Verified panel. Needs `NEAR_AI_API_KEY`. Not yet confirmed against the live service by the author.
 
 ## Setup (Windows PowerShell)
 
