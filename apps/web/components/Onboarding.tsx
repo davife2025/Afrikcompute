@@ -30,6 +30,7 @@ export function Onboarding() {
             </li>
           ))}
         </ol>
+        {role === "contributor" ? <p className="notice fair">{t.fairPay}</p> : null}
       </div>
     </section>
   );

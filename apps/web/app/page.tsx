@@ -26,7 +26,7 @@ export default function Home() {
             <h1>{t.heroTitle}</h1>
             <p>{t.heroSub}</p>
             <div className="hero-actions">
-              <Link className="btn solid" href="/#start">{t.cta1}</Link>
+              <Link className="btn solid" href="/requests">{t.cta1}</Link>
               <Link className="btn line" href="/docs">{t.cta2}</Link>
             </div>
           </div>
@@ -36,7 +36,19 @@ export default function Home() {
 
       <Onboarding />
 
-      <section id="proof" className="band tint">
+      <section id="domains" className="band tint">
+        <div className="wrap">
+          <h2>{t.domainsTitle}</h2>
+          <p className="lede">{t.domainsNote}</p>
+          <ul className="domains">
+            {t.domainNames.map((name, i) => (
+              <li key={name} className={`d${i + 1}`}>{name}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section id="proof" className="band">
         <div className="wrap proof-grid">
           <div>
             <h2>{t.proofTitle}</h2>
@@ -47,7 +59,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="resources" className="band">
+      <section id="resources" className="band tint">
         <div className="wrap">
           <h2>{t.resourcesTitle}</h2>
           <ul className="rows">

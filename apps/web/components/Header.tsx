@@ -41,9 +41,10 @@ export function Header() {
       </button>
 
       <nav className="site-nav" aria-label="Main">
-        <Link href="/#start">{t.start}</Link>
-        <Link href="/#resources">{t.resources}</Link>
+        <Link href="/requests">{t.requests}</Link>
+        <Link href="/dashboard">{t.dashboard}</Link>
         <Link href="/try">{t.proof}</Link>
+
       </nav>
 
       <div className="header-tools">

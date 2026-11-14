@@ -18,6 +18,8 @@ export const toRequest = (r: any): DataRequest => ({
   description: r.description,
   languageCode: r.language_code,
   taskType: r.task_type,
+  domain: r.domain,
+  modality: r.modality,
   rewardAmount: Number(r.reward_amount),
   rewardToken: r.reward_token,
   status: r.status,
