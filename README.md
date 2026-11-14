@@ -144,3 +144,4 @@ supabase/           Migrations 0001 to 0004 and fictional seed data
 samples/            Fictional sample contributions (JSON)
 docs/               Pitch deck (AfrikCompute-pitch-deck.pptx)
 ```
+<img width="2560" height="1600" alt="F6CE3C00-1624-4B1D-B603-964978B87886" src="https://github.com/user-attachments/assets/1a5538c8-1f95-43b9-9687-92d2f974528e" />
