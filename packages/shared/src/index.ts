@@ -134,3 +134,30 @@ export const DEFAULT_LANGUAGES: Language[] = [
   { code: "zu", name: "Zulu", nativeName: "isiZulu" },
   { code: "pcm", name: "Nigerian Pidgin", nativeName: "Naijá" },
 ];
+
+/** A task as shown to contributors (open tasks) and to the request owner (all tasks). */
+export interface TaskView {
+  id: string;
+  status: "open" | "assigned" | "submitted" | "approved" | "rejected";
+  text: string;
+  /** Owner only. */
+  submissions?: { id: string; status: "pending" | "approved" | "rejected"; contributorId: string; createdAt: string }[];
+}
+
+export interface MySubmission {
+  id: string;
+  status: "pending" | "approved" | "rejected";
+  createdAt: string;
+  taskText: string;
+  requestId: string;
+  requestTitle: string;
+  languageCode: string;
+  domain: Domain;
+  rewardAmount: number;
+  rewardToken: string;
+  payout: { id: string; status: PayoutStatus; amount: number; token: string } | null;
+}
+
+export interface MyRequest extends DataRequest {
+  taskCounts: Record<string, number>;
+}
