@@ -8,7 +8,7 @@ import type { Locale } from "@afrikcompute/shared";
  * reviewed by native speakers. Have a native speaker review them before launch.
  */
 const en = {
-  start: "Get started", resources: "Resources", proof: "Proof",
+  start: "Get started", resources: "Resources", proof: "Proof", requests: "Requests", dashboard: "My work",
   searchPlaceholder: "Search docs, endpoints, tasks", searchLabel: "Search",
   connect: "Connect wallet", signIn: "Sign in", signOut: "Sign out",
   groupDocs: "Docs", groupApi: "API", groupTasks: "Tasks", groupDatasets: "Datasets",
@@ -33,6 +33,10 @@ const en = {
   proofText: "Run a private review and the Verified panel lists every attestation check. It also lists what we do not check yet.",
   proofCta: "Try a private review",
   resourcesTitle: "Resources and APIs",
+  domainsTitle: "What you can contribute",
+  domainsNote: "Text today. Images and audio are next.",
+  domainNames: ["Agriculture", "Health", "Financial inclusion", "Education and government services"],
+  fairPay: "Rewards are set by requesters and paid per approved task. We do not enforce a minimum rate yet, so check the reward before you start.",
   res: [
     ["API reference", "Endpoints for tasks, datasets and payouts."],
     ["Agents on Intents", "Agent API overview for payments."],
@@ -45,7 +49,7 @@ const en = {
 type Strings = typeof en;
 
 const ha: Strings = {
-  start: "Fara", resources: "Albarkatu", proof: "Shaida",
+  start: "Fara", resources: "Albarkatu", proof: "Shaida", requests: "Buƙatu", dashboard: "Aikina",
   searchPlaceholder: "Nemi takardu, API, ayyuka", searchLabel: "Bincike",
   connect: "Haɗa walat", signIn: "Shiga", signOut: "Fita",
   groupDocs: "Takardu", groupApi: "API", groupTasks: "Ayyuka", groupDatasets: "Bayanai",
@@ -70,6 +74,10 @@ const ha: Strings = {
   proofText: "Yi bincike na sirri, kuma allon Tabbatarwa zai jera duk binciken shaida. Zai kuma nuna abubuwan da ba mu bincika ba tukuna.",
   proofCta: "Gwada bincike na sirri",
   resourcesTitle: "Albarkatu da API",
+  domainsTitle: "Abin da za ka iya bayarwa",
+  domainsNote: "Rubutu a yanzu. Hotuna da sauti na gaba.",
+  domainNames: ["Noma", "Lafiya", "Haɗakar kuɗi", "Ilimi da ayyukan gwamnati"],
+  fairPay: "Masu neman bayanai ne ke saita lada, ana biyan kowane aikin da aka amince da shi. Ba mu tilasta mafi ƙarancin lada ba tukuna, don haka ka duba ladan kafin ka fara.",
   res: [
     ["Takardun API", "Hanyoyin API don ayyuka, bayanai da biyan kuɗi."],
     ["Agents on Intents", "Bayanin Agent API don biyan kuɗi."],
@@ -81,7 +89,7 @@ const ha: Strings = {
 };
 
 const yo: Strings = {
-  start: "Bẹ̀rẹ̀", resources: "Àwọn ohun èlò", proof: "Ẹ̀rí",
+  start: "Bẹ̀rẹ̀", resources: "Àwọn ohun èlò", proof: "Ẹ̀rí", requests: "Àwọn ìbéèrè", dashboard: "Iṣẹ́ mi",
   searchPlaceholder: "Wá ìwé, API, iṣẹ́", searchLabel: "Wá",
   connect: "So àpamọ́wọ́ pọ̀", signIn: "Wọlé", signOut: "Jáde",
   groupDocs: "Ìwé", groupApi: "API", groupTasks: "Iṣẹ́", groupDatasets: "Dátà",
@@ -106,6 +114,10 @@ const yo: Strings = {
   proofText: "Ṣe àyẹ̀wò ìkọ̀kọ̀, pánẹ́ẹ̀lì Ìjẹ́rìísí yóò sì ṣe àtòjọ gbogbo àyẹ̀wò ẹ̀rí. Yóò tún fi àwọn ohun tí a kò tíì ṣàyẹ̀wò hàn.",
   proofCta: "Gbìyànjú àyẹ̀wò ìkọ̀kọ̀",
   resourcesTitle: "Àwọn ohun èlò àti API",
+  domainsTitle: "Ohun tí o lè fúnni",
+  domainsNote: "Ọ̀rọ̀ lónìí. Àwòrán àti ohùn ló kàn.",
+  domainNames: ["Iṣẹ́ àgbẹ̀", "Ìlera", "Ìfàmọ́ owó", "Ẹ̀kọ́ àti iṣẹ́ ìjọba"],
+  fairPay: "Àwọn olùbéèrè ló ń ṣètò owó ẹ̀bùn, a sì ń san án fún iṣẹ́ kọ̀ọ̀kan tí a fọwọ́sí. A kò tíì fi owó tó kéré jù lélẹ̀, nítorí náà wo owó ẹ̀bùn náà kí o tó bẹ̀rẹ̀.",
   res: [
     ["Ìwé API", "Àwọn ọ̀nà API fún iṣẹ́, dátà àti ìsanwó."],
     ["Agents on Intents", "Àkópọ̀ Agent API fún ìsanwó."],
@@ -117,7 +129,7 @@ const yo: Strings = {
 };
 
 const ig: Strings = {
-  start: "Malite", resources: "Akụrụngwa", proof: "Ihe akaebe",
+  start: "Malite", resources: "Akụrụngwa", proof: "Ihe akaebe", requests: "Arịrịọ", dashboard: "Ọrụ m",
   searchPlaceholder: "Chọọ akwụkwọ, API, ọrụ", searchLabel: "Chọọ",
   connect: "Jikọọ wallet", signIn: "Banye", signOut: "Pụọ",
   groupDocs: "Akwụkwọ", groupApi: "API", groupTasks: "Ọrụ", groupDatasets: "Data",
@@ -142,6 +154,10 @@ const ig: Strings = {
   proofText: "Mee nyocha nzuzo, bọọdụ Nkwenye ga-edepụta nyocha akaebe niile. Ọ ga-edepụtakwa ihe anyị anaghị enyocha ugbu a.",
   proofCta: "Nwaa nyocha nzuzo",
   resourcesTitle: "Akụrụngwa na API",
+  domainsTitle: "Ihe i nwere ike inye",
+  domainsNote: "Ederede ugbu a. Ihe oyiyi na ụda na-esote.",
+  domainNames: ["Ọrụ ugbo", "Ahụike", "Ịgụnye ego", "Agụmakwụkwọ na ọrụ gọọmenti"],
+  fairPay: "Ndị rịọrọ data na-eguzobe ụgwọ ọrụ, a na-akwụ ụgwọ maka ọrụ ọ bụla a kwadoro. Anyị etinyebeghị ụgwọ kacha obere ugbu a, ya mere lelee ụgwọ ọrụ ahụ tupu ịmalite.",
   res: [
     ["Akwụkwọ API", "Ụzọ API maka ọrụ, data na ịkwụ ụgwọ."],
     ["Agents on Intents", "Nchịkọta Agent API maka ịkwụ ụgwọ."],
