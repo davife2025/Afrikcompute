@@ -11,7 +11,7 @@
     "dev": "pnpm build:shared && pnpm -r --parallel --filter @afrikcompute/api --filter @afrikcompute/web dev",
     "build": "pnpm -r build",
     "typecheck": "pnpm build:shared && pnpm -r typecheck",
-    "check": "pnpm typecheck && pnpm --filter @afrikcompute/api auth:selftest"
+    "check": "pnpm typecheck && pnpm --filter @afrikcompute/api auth:selftest && pnpm --filter @afrikcompute/api session4:selftest && pnpm --filter @afrikcompute/api privacy:check"
   },
   "devDependencies": {
     "typescript": "^5.6.3"

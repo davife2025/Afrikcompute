@@ -72,3 +72,25 @@ export interface AuthSession {
   token: string; // bearer token for the API
   profile: Profile;
 }
+
+export interface ReviewVerdict {
+  score: number; // 0-100
+  ok: boolean;
+  issues: string[];
+}
+
+/** Response of the private review endpoint. */
+export interface PrivateReviewResponse {
+  verdict: ReviewVerdict;
+  verification: VerificationResult;
+}
+
+export interface SubmissionView {
+  id: string;
+  taskId: string;
+  contributorId: string;
+  content: string;
+  status: "pending" | "approved" | "rejected";
+  review: PrivateReviewResponse | null;
+  createdAt: string;
+}
