@@ -1,4 +1,4 @@
-# AfrikCompute: snapshot after Session 5 (Payouts through NEAR Intents)
+# AfrikCompute: snapshot after Session 6 (Landing page, Verified panel and wallet UI)
 
 This is the project as it stood at the end of this session. Later sessions add to it. The complete project is `afrikcompute-complete.zip` (also the Session 7 zip).
 
@@ -9,6 +9,7 @@ This is the project as it stood at the end of this session. Later sessions add t
 3. Supabase schema (`supabase/migrations/0001_init.sql`), NEAR wallet sign-in (NEP-413) on testnet, profiles, languages and requests endpoints. Needs `API_JWT_SECRET`.
 4. Private review (`apps/api/src/private/`, keeps nothing server-side), encrypted submissions (AES-256-GCM), migration 0002. Needs `DATA_ENCRYPTION_KEY`, `NEAR_AI_API_KEY`, `NEAR_AI_MODEL`.
 5. Payouts through the NEAR Intents Agent API (simulate mode by default; live mode moves real mainnet funds), migration 0003.
+6. Web app: landing page, Verified panel, wallet sign-in UI, Ctrl K search, language toggle (Hausa, Yoruba, Igbo are drafts), `/try` private review page and `/docs`.
 
 ## Setup (Windows PowerShell)
 
