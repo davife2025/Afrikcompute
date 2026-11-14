@@ -36,6 +36,22 @@ export async function chat(cfg: NearConfig, model: string, prompt: string): Prom
   return { id: body.id, content: body.choices[0]?.message.content ?? "" };
 }
 
+export async function chatMessages(
+  cfg: NearConfig,
+  model: string,
+  messages: { role: "system" | "user"; content: string }[],
+): Promise<ChatResult> {
+  const res = await fetch(`${cfg.NEAR_AI_BASE_URL}/chat/completions`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${cfg.NEAR_AI_API_KEY}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ model, messages, stream: false, temperature: 0 }),
+    signal: AbortSignal.timeout(60_000),
+  });
+  if (!res.ok) throw new Error(`chat/completions failed: ${res.status}`);
+  const body = (await res.json()) as { id: string; choices: { message: { content: string } }[] };
+  return { id: body.id, content: body.choices[0]?.message.content ?? "" };
+}
+
 export interface ModelAttestation {
   signing_address: string;
   request_nonce: string;

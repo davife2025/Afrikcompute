@@ -54,6 +54,8 @@ export interface DataRequest {
   description: string | null;
   languageCode: string;
   taskType: TaskType;
+  domain: Domain;
+  modality: Modality;
   rewardAmount: number;
   rewardToken: string;
   status: "open" | "closed";
@@ -108,3 +110,27 @@ export interface Payout {
   failureCode: string | null;
   createdAt: string;
 }
+
+export type Domain = "general" | "agriculture" | "health" | "finance" | "education";
+export type Modality = "text";
+
+export const DOMAINS: { code: Domain; label: string }[] = [
+  { code: "general", label: "General" },
+  { code: "agriculture", label: "Agriculture" },
+  { code: "health", label: "Health" },
+  { code: "finance", label: "Financial inclusion" },
+  { code: "education", label: "Education and government services" },
+];
+
+export * from "./samples";
+
+/** Same languages as the database seed. Used when the API cannot be reached. */
+export const DEFAULT_LANGUAGES: Language[] = [
+  { code: "ha", name: "Hausa", nativeName: "Hausa" },
+  { code: "yo", name: "Yoruba", nativeName: "Yorùbá" },
+  { code: "ig", name: "Igbo", nativeName: "Igbo" },
+  { code: "sw", name: "Swahili", nativeName: "Kiswahili" },
+  { code: "am", name: "Amharic", nativeName: "አማርኛ" },
+  { code: "zu", name: "Zulu", nativeName: "isiZulu" },
+  { code: "pcm", name: "Nigerian Pidgin", nativeName: "Naijá" },
+];
